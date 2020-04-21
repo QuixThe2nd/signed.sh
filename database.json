@@ -9,6 +9,11 @@
       "Name": "Ben",
       "Device": "iPhone X",
       "Cert": "JJS"
+    },
+    "UDID_HERE__UDID_HERE": {
+      "Name": "Ben",
+      "Device": "iPhone XS",
+      "Cert": "JJS"
     }
   }
 }
