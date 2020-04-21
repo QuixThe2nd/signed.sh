@@ -12,3 +12,6 @@ Repeat above for every IPA you want to upload then continue to next step. If you
 All files are overwritten. So if a certificate changes, the IPAs will be overwritten.
 There is no need to re upload the application icon after the first time, it will just overwrite itself.
 If you are uploading multiple IPAs for the same application (in case of different certificates), you will need to run script.php.
+
+## License
+Feel free to use this system, just credit me.
