@@ -5,8 +5,10 @@ foreach($apps as $app){
     $app = substr($app, 8);
     mkdir('apps/' . $app);
     $cert = file_get_contents('uploads/' . $app . '/cert.txt');
-    rename ('uploads/' . $app . '/' . $app . '.png', 'apps/' . $app . '/' . $app . '.png');
-    rename ('uploads/' . $app . '/' . $app . '.ipa', 'apps/' . $app . '/' . $app . '_' . $cert . '.ipa');
+    rename('uploads/' . $app . '/' . $app . '.png', 'apps/' . $app . '/' . $app . '.png');
+    rename('uploads/' . $app . '/' . $app . '.ipa', 'apps/' . $app . '/' . $app . '_' . $cert . '.ipa');
+    unlink('uploads/' . $app . '/cert.txt');
+    rmdir('uploads/' . $app);
     file_put_contents('apps/' . $app . '/' . $app . '_' . $cert . '.plist', '<?xml version="1.0" encoding="UTF-8"?>
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
