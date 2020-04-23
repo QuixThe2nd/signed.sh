@@ -1,5 +1,7 @@
 <?php
 // Made by Quix
+if(empty($_GET['udid']))
+    die('No UDID Supplied');
 $apps = array_filter(glob('apps/*'), 'is_dir');
 $cert = json_decode(file_get_contents('database.json'), true)['Devices'][$_GET['udid']]['Cert'];
 foreach($apps as $app){
