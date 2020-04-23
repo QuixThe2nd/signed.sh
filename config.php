@@ -1,4 +1,5 @@
 <?php
+// Made by Quix
 $remove_cert = true;
 $remove_icon = true;
 $remove_ipa = true;
