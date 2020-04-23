@@ -22,7 +22,7 @@ foreach($apps as $app){
                         <key>kind</key>
                         <string>software-package</string>
                         <key>url</key>
-                        <string>https://app.signed.sh/apps/' . $app . '_' . $cert . '.ipa</string>
+                        <string>https://app.signed.sh/apps/' . $app . '/' . $app . '_' . $cert . '.ipa</string>
                     </dict>
                 </array>
                 <key>metadata</key>
