@@ -10,8 +10,12 @@ foreach($apps as $app){
         unlink('uploads/' . $app . '/cert.txt');
     if($remove_icon = true || $remove_dir = true)
     	rename('uploads/' . $app . '/' . $app . '.png', 'apps/' . $app . '/' . $app . '.png');
+    else
+    	copy('uploads/' . $app . '/' . $app . '.png', 'apps/' . $app . '/' . $app . '.png');
     if($remove_ipa = true || $remove_dir = true)
     	rename('uploads/' . $app . '/' . $app . '.ipa', 'apps/' . $app . '/' . $app . '_' . $cert . '.ipa');
+    else
+        copy('uploads/' . $app . '/' . $app . '.ipa', 'apps/' . $app . '/' . $app . '_' . $cert . '.ipa');
     if($remove_dir = true)
     	rmdir('uploads/' . $app);
     file_put_contents('apps/' . $app . '/' . $app . '_' . $cert . '.plist', '<?xml version="1.0" encoding="UTF-8"?>
